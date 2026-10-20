@@ -57,7 +57,7 @@ def task4():
     for v in valutes:
         nominal = v.getElementsByTagName("Nominal")[0].firstChild.data
         code = v.getElementsByTagName("CharCode")[0].firstChild.data
-        if nominal == "10" or nominal == "100":
+        if int(nominal) == 10 or int(nominal) == 100:
             codes.append(code)
     print("CharCode с номиналом 10 или 100:", codes)
 
